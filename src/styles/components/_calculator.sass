@@ -1,0 +1,75 @@
+@import "../vars/colors"
+@import "../base/debug"
+
+.calc
+  display: flex
+  flex-flow: column nowrap
+  width: 100%
+  @include debug-lines
+  &__screen
+    display: flex
+    flex-flow: column nowrap
+    height: 85px
+    background: $background-screen-1
+    border-radius: 7px
+    font-size: 2rem
+    color: $text-white-1
+    text-align: right
+    padding-top: 35px
+    font-size: 3rem
+    padding-right: 20px
+    @include debug-lines
+  &__key
+    height: 400px
+    display: flex
+    border-radius: 7px
+    flex-flow: column nowrap
+    background: $background-keypad-1
+    justify-content: space-evenly
+    margin-top: 20px
+    padding-top: 7%
+    padding-bottom: 7%
+    @include debug-lines
+    &__row
+      display: flex
+      flex-flow: row nowrap
+      justify-content: space-evenly
+      margin-bottom: 20px
+      @include debug-lines
+      &__btn
+        background: $key-gray-1
+        color: $text-gray-1
+        border: none
+        font-size: 1.8rem
+        width: 18.5%
+        height: 60px
+        border-radius: 7px
+        text-align: center
+        border-bottom: 4px solid $key-gray-shadow-1
+        vertical-align: center
+        &--bold
+          font-size: 1.2rem
+          background: $key-blue-1
+          color: $text-white-1
+          border-bottom: 4px solid $key-blue-shadow-1
+    &__base
+      display: flex
+      flex-flow: row nowrap
+      justify-content: space-between
+      padding-left: 5%
+      padding-right: 5%
+      @include debug-lines
+      &__btn
+        height: 60px
+        border: none
+        font-size: 1.3rem
+        color: $text-white-1
+        background: $key-blue-1
+        border-radius: 7px
+        text-align: center
+        vertical-align: center
+        width: 47.2%
+        border-bottom: 4px solid $key-blue-shadow-1
+        &--red
+          background: $key-red-1
+          border-bottom: 4px solid $key-red-shadow-1
